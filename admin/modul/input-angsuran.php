@@ -1,6 +1,16 @@
 <script src="../assets/js/jquery-1.8.2.js"></script>
 <script src="../assets/js/jquery-ui-1.9.0.custom.js"></script>
 <script src="../assets/js/jquery.ui.datepicker-id.js"></script>
+<script type="text/javascript">
+    function bagi() {
+        var txtbil1 = document.getElementById('bil1').value;
+        var txtbil2 = document.getElementById('bil2').value;
+        var result = parseInt(txtbil1) / parseInt(txtbil2);
+        if (!isNaN(result)) {
+            document.getElementById('hasil').value = result;
+        };
+    }
+</script>
 <?php
 include_once '../config/class.php';
 include_once '../config/lib.php';
@@ -62,6 +72,21 @@ $id_plg=$angsur->tampilPesanAngsur('id_pelanggan',$idpsn);
         $tgl_skr = date('Y-m-d');
         ?>
 			<table class="table table-responsive">
+                <tr>
+                    <td>Kalkulator</td>
+                    <td>:</td>
+                    <td>
+                        <input type="text" name="bil1" id="bil1" onkeyup="bagi();" />
+                        <!-- <select name="operator" id="operator">
+                            <option value="+"> + </option>    
+                            <option value="-"> - </option>    
+                            <option value="/"> / </option>    
+                            <option value="*"> * </option>    
+                        </select> -->
+                        <input type="text" name="bil2" id="bil2" onkeyup="bagi();" value="<?=$angsur->tampilPesanAngsur('harga',$idpsn)?>" readonly/> = <input type="text" name="hasil" id="hasil" />
+                        <!-- <button id="proses">Eksekusi</button> --> 
+                    </td>    
+                </tr>
 				<tr>
 					<td>Nama</td>
 					<td>:</td>
