@@ -1,0 +1,24 @@
+RewriteEngine on
+
+ErrorDocument 404   /404.html
+
+RewriteRule ^home$ index.php?page=home [L]
+RewriteRule ^cek-pembayaran$ index.php?page=cek-pembayaran [L]
+RewriteRule ^tentang-kami$ index.php?page=tentang-kami [L]
+RewriteRule ^kontak$ index.php?page=kontak [L]
+RewriteRule ^persyaratan$ index.php?page=persyaratan [L]
+RewriteRule ^daftar$ index.php?page=daftar [L]
+RewriteRule ^produk$ index.php?page=produk [L]
+RewriteRule ^lq-login$ lq-login.php [L] 
+
+RewriteRule ^admin/home$ admin/index.php?mod=home [L]
+RewriteRule ^admin/tambah-pelanggan$ admin/index.php?mod=tambah-pelanggan [L]
+RewriteRule ^admin/data-pelanggan$ admin/index.php?mod=data-pelanggan [L]
+RewriteRule ^admin/data-paket$ admin/index.php?mod=data-paket [L] 
+RewriteRule ^admin/data-pemesanan$ admin/index.php?mod=data-pemesanan [L] 
+RewriteRule ^admin/data-angsuran$ admin/index.php?mod=data-angsuran [L] 
+
+RewriteRule ^admin/laporan-harian$ admin/index.php?mod=lap-harian [L]
+RewriteRule ^admin/laporan-bulanan$ admin/index.php?mod=lap-bulanan [L]  
+
+RewriteRule ^admin/edit-profil\.php$ admin/index.php?module=profil/edit-profil&edit=$1 [L]
