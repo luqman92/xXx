@@ -77,14 +77,7 @@ $id_plg=$angsur->tampilPesanAngsur('id_pelanggan',$idpsn);
                     <td>:</td>
                     <td>
                         <input type="text" name="bil1" id="bil1" onkeyup="bagi();" />
-                        <!-- <select name="operator" id="operator">
-                            <option value="+"> + </option>    
-                            <option value="-"> - </option>    
-                            <option value="/"> / </option>    
-                            <option value="*"> * </option>    
-                        </select> -->
-                        <input type="text" name="bil2" id="bil2" onkeyup="bagi();" value="<?=$angsur->tampilPesanAngsur('harga',$idpsn)?>" readonly/> = <input type="text" name="hasil" id="hasil" />
-                        <!-- <button id="proses">Eksekusi</button> --> 
+                        <input type="text" name="bil2" id="bil2" onkeyup="bagi();" value="<?=$angsur->tampilPesanAngsur('harga',$idpsn)?>" readonly/> = <input type="text" name="hasil" id="hasil" /> 
                     </td>    
                 </tr>
 				<tr>
